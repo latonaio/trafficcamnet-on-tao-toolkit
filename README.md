@@ -9,8 +9,8 @@ trafficcamnet-on-tao-toolkit は、NVIDIA TAO TOOLKIT を用いて TrafficCamNet
 - TensorRT Runtime
 
 ## TrafficCamNetについて
-TrafficCamNet は、画像内の車、人、道路標識、および二輪車を検出し、カテゴリラベルを返すAIモデルです。
-TrafficCamNet は、バックボーン特徴抽出にResNet18を使用しており、混雑した場所でも正確に物体検出を行うことができます。
+TrafficCamNet は、画像内の車、人、道路標識、および二輪車を検出し、カテゴリラベルを返すAIモデルです。  
+TrafficCamNet は、特徴抽出にResNet18を使用しており、混雑した場所でも正確に物体検出を行うことができます。
 
 ## 動作手順
 
