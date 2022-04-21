@@ -16,7 +16,8 @@ TrafficCamNet は、特徴抽出にResNet18を使用しており、混雑した�
 
 ### engineファイルの生成
 TrafficCamNet のAIモデルをデバイスに最適化するため、ResNet18 における TrafficCamNet の .etlt ファイルを engine file に変換します。  
-現時点におけるNVIDIAの仕様では、GPUのアーキテクチャごとに engine file の生成が必要です。つまり、あるサーバで生成した engine file を別のサーバーにそのまま適用することはできません。  
+現時点におけるNVIDIAの仕様では、GPUのアーキテクチャごとに engine file の生成が必要です。  
+つまり、あるサーバで生成した engine file を別のサーバーにそのまま適用することはできません。  
 本レポジトリに格納された trafficcamnet.engine は、実際に生成される engine file の参考例です。  
 engine fileへの変換は、Makefile に記載された以下のコマンドにより実行できます。  
 
