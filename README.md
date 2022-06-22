@@ -32,3 +32,12 @@ tao-convert:
 ## engineファイルについて
 engineファイルである peoplenet.engine は、[trafficcamnet-on-deepstream](https://github.com/latonaio/trafficcamnet-on-deepstream)と共通のファイルであり、本レポジトリで作成した engineファイルを、当該リポジトリで使用しています。  
 
+## 演算について
+本レポジトリでは、ニューラルネットワークのモデルにおいて、エッジコンピューティング環境での演算スループット効率を高めるため、FP16(半精度浮動小数点)を使用しています。  
+浮動小数点値の変更は、Makefileの以下の部分を変更し、engineファイルを生成してください。
+
+```
+tao-convert:
+	docker exec -it trafficcamnet-tao-toolkit tao-converter -k tlt_encode -t fp16 -d 3,544,960 -e /app/src/trafficcamnet.engine /app/src/resnet18_trafficcamnet_pruned.etlt 
+
+```
